@@ -109,8 +109,8 @@ int main(int argc, char** argv){
 
     for(int i = 0; i < DataSize; i++)
     {
-      depth_image.data[2*i] = (buffer[i])%256;
-      depth_image.data[2*i+1] = (buffer[i])/256;
+      depth_image.data[2*i] = (10*buffer[i])%256;
+      depth_image.data[2*i+1] = (10*buffer[i])/256;
     }
 
     camera_info_pub.publish(camera_info);
